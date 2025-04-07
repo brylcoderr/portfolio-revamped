@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+  }
+
+  /* Purple Theme - Light Mode */
+  .theme-purple {
+    --primary: 267 75% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 267 30% 90%;
+    --secondary-foreground: 267 75% 30%;
+    --accent: 267 50% 90%;
+    --accent-foreground: 267 75% 30%;
+    --ring: 267 75% 50%;
+    --muted: 267 20% 95%;
+    --muted-foreground: 267 30% 40%;
+    --border: 267 30% 90%;
+  }
+
+  /* Blue Theme - Light Mode */
+  .theme-blue {
+    --primary: 210 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 50% 90%;
+    --secondary-foreground: 210 100% 30%;
+    --accent: 210 70% 90%;
+    --accent-foreground: 210 100% 30%;
+    --ring: 210 100% 50%;
+    --muted: 210 40% 95%;
+    --muted-foreground: 210 40% 40%;
+    --border: 210 50% 90%;
+  }
+
+  /* Green Theme - Light Mode */
+  .theme-green {
+    --primary: 142 76% 36%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 142 40% 90%;
+    --secondary-foreground: 142 76% 26%;
+    --accent: 142 60% 90%;
+    --accent-foreground: 142 76% 26%;
+    --ring: 142 76% 36%;
+    --muted: 142 30% 95%;
+    --muted-foreground: 142 30% 40%;
+    --border: 142 40% 90%;
+  }
+
+  /* Dark mode theme overrides */
+  .dark.theme-purple {
+    --primary: 267 75% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 267 30% 20%;
+    --secondary-foreground: 0 0% 98%;
+    --accent: 267 50% 20%;
+    --accent-foreground: 0 0% 98%;
+    --ring: 267 75% 60%;
+    --muted: 267 30% 15%;
+    --muted-foreground: 267 20% 70%;
+    --border: 267 30% 20%;
+  }
+
+  .dark.theme-blue {
+    --primary: 210 100% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 50% 20%;
+    --secondary-foreground: 0 0% 98%;
+    --accent: 210 70% 20%;
+    --accent-foreground: 0 0% 98%;
+    --ring: 210 100% 60%;
+    --muted: 210 40% 15%;
+    --muted-foreground: 210 40% 70%;
+    --border: 210 50% 20%;
+  }
+
+  .dark.theme-green {
+    --primary: 142 76% 46%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 142 40% 20%;
+    --secondary-foreground: 0 0% 98%;
+    --accent: 142 60% 20%;
+    --accent-foreground: 0 0% 98%;
+    --ring: 142 76% 46%;
+    --muted: 142 30% 15%;
+    --muted-foreground: 142 30% 70%;
+    --border: 142 40% 20%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground transition-colors duration-300;
+  }
+}
+
