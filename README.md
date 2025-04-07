@@ -104,7 +104,7 @@ npm run dev
 ## 📬 Contact
 
 Have feedback or want to collaborate?  
-Reach out at [your.email@example.com](mailto:brylcoder@gmail.com) or connect on [LinkedIn](https://www.linkedin.com/in/brylcoder)
+Reach out at [brylcoder@gmail.com](mailto:brylcoder@gmail.com) or connect on [LinkedIn](https://www.linkedin.com/in/brylcoder)
 
 ---
 
