@@ -21,12 +21,12 @@ const projectsData = [
   },
   {
     id: 2,
-    title: "Task Management App",
-    description: "A collaborative task management application with real-time updates and team workspaces.",
-    image: "/project-1.png?height=400&width=600",
-    tags: ["Next.js", "Firebase", "Tailwind CSS", "TypeScript"],
-    liveUrl: "https://ai-task-manager-xi.vercel.app/",
-    githubUrl: "#",
+    title: "Tech Landing Page",
+    description: "A modern, responsive landing page built with Next.js, React 19, Tailwind CSS, and Radix UI components. Designed for speed, accessibility, and developer-friendly structure.",
+    image: "/project-5.png?height=400&width=600",
+    tags: ["React", "Next", "TailwindCSS", "Shadcn"],
+    liveUrl: "https://tech-landing-page-ruby.vercel.app/",
+    githubUrl: "https://github.com/brylcoderr/tech-landing-page",
   },
   {
     id: 3,
@@ -45,6 +45,23 @@ const projectsData = [
     tags: ["React", "Vite", "TailwindCSS", "CoinGeko API"],
     liveUrl: "https://real-time-dash-board.vercel.app/",
     githubUrl: "https://github.com/brylcoderr/Real-Time-Dash-Board",
+  },
+  {
+    id: 5,
+    title: "Task Management App",
+    description: "A collaborative task management application with real-time updates and team workspaces.",
+    image: "/project-1.png?height=400&width=600",
+    tags: ["Next.js", "Firebase", "Tailwind CSS", "TypeScript"],
+    liveUrl: "https://ai-task-manager-xi.vercel.app/",
+    githubUrl: "#",
+  },{
+    id: 6,
+    title: "Coin Collector",
+    description: "Coin Collector is a fun and interactive 2D game built using Next.js, React, and styled with Tailwind CSS. Navigate your character, avoid obstacles, and collect coins to boost your score and level up!",
+    image: "/project-6.png?height=400&width=600",
+    tags: ["React", "Next.js", "TailwindCSS", "Typescript"],
+    liveUrl: "https://2d-game-nextjs.vercel.app/",
+    githubUrl: "https://github.com/brylcoderr/2d-game-nextjs",
   },
 ]
 
