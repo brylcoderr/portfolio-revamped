@@ -110,7 +110,7 @@ Reach out at [brylcoder@gmail.com](mailto:brylcoder@gmail.com) or connect on [Li
 
 ## 🧑‍💻 Author
 
-**Your Name**  
+**Shubham Kushwah**  
 [GitHub](https://github.com/brylcoderr) • [Twitter](https://twitter.com/dpshubham)
 
 ---
