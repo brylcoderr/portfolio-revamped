@@ -60,8 +60,8 @@ export default function Contact() {
   const socialLinks = [
     { icon: <Github className="h-5 w-5" />, url: "https://github.com/brylcoderr", label: "GitHub" },
     { icon: <Linkedin className="h-5 w-5" />, url: "https://linkedin.com/in/brylcoder", label: "LinkedIn" },
-    { icon: <Instagram className="h-5 w-5" />, url: "https://instagram.com/brylcoder", label: "Instagram" },
-    { icon: <Youtube className="h-5 w-5" />, url: "https://youtube.com/brylcoder", label: "YouTube" },
+    // { icon: <Instagram className="h-5 w-5" />, url: "https://instagram.com/brylcoder", label: "Instagram" },
+    // { icon: <Youtube className="h-5 w-5" />, url: "https://youtube.com/brylcoder", label: "YouTube" },
   ]
 
   return (
