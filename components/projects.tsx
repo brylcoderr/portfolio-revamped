@@ -30,6 +30,24 @@ const projectsData = [
   },
   {
     id: 3,
+    title: "Portfolio Builder",
+    description: "A modern, full-stack portfolio builder web application built with React, Vite, Firebase, TailwindCSS, and Stripe integration. Perfect for developers or creatives who want to build, manage, and host personal portfolios with ease.",
+    image: "/project-8.png?height=400&width=600",
+    tags: ["React", "Vite", "Firebase", "TailwindCSS"],
+    liveUrl: "https://portfolio-builder-git-main-brylcoderrs-projects.vercel.app/",
+    githubUrl: "https://github.com/brylcoderr/portfolio-builder",
+  },
+  {
+    id: 4,
+    title: "E-commerce Dashboard",
+    description: "A modern, responsive eCommerce admin dashboard built using Next.js 15, Tailwind CSS, Radix UI, and Recharts. This dashboard provides store performance insights such as sales, active users, orders, and conversion rates.",
+    image: "/project-7.png?height=400&width=600",
+    tags: ["Nextjs", "TailwindCSS", "Recharts","NextAuth.js"],
+    liveUrl: "https://bryl-ecommerce-dashboard.vercel.app//",
+    githubUrl: "https://github.com/brylcoderr/ecommerce-dashboard",
+  },
+  {
+    id: 5,
     title: "Inside Dash",
     description: "Insight Dash is a modern web application. It leverages a variety of powerful libraries to enhance UI/UX, state management, form handling, and data visualization.",
     image: "/project-4.png?height=400&width=600",
@@ -38,7 +56,7 @@ const projectsData = [
     githubUrl: "https://github.com/brylcoderr/Insight-Dash",
   },
   {
-    id: 4,
+    id: 6,
     title: "Real Time Dash Board",
     description: "A modern, high-performance real-time analytics dashboard. This project provides real-time insights with beautiful data visualizations and a responsive UI.",
     image: "/project-2.png?height=400&width=600",
@@ -47,7 +65,7 @@ const projectsData = [
     githubUrl: "https://github.com/brylcoderr/Real-Time-Dash-Board",
   },
   {
-    id: 5,
+    id: 7,
     title: "Task Management App",
     description: "A collaborative task management application with real-time updates and team workspaces.",
     image: "/project-1.png?height=400&width=600",
@@ -55,7 +73,7 @@ const projectsData = [
     liveUrl: "https://ai-task-manager-xi.vercel.app/",
     githubUrl: "#",
   },{
-    id: 6,
+    id: 8,
     title: "Coin Collector",
     description: "Coin Collector is a fun and interactive 2D game built using Next.js, React, and styled with Tailwind CSS. Navigate your character, avoid obstacles, and collect coins to boost your score and level up!",
     image: "/project-6.png?height=400&width=600",
@@ -84,14 +102,14 @@ export default function Projects() {
   }
 
   return (
-    <section id="projects" className="py-20 px-4 md:px-8 bg-muted/30">
-      <div className="container mx-auto max-w-6xl">
+    <section id="projects" className="py-20 px-4 md:px-8 bg-muted/30 w-full">
+      <div className="w-full max-w-screen-2xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">My Projects</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -100,7 +118,7 @@ export default function Projects() {
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
           variants={container}
           initial="hidden"
           whileInView="show"
@@ -109,11 +127,11 @@ export default function Projects() {
           {projectsData.map((project) => (
             <motion.div key={project.id} variants={item}>
               <Card
-                className="overflow-hidden h-full transition-all duration-300 hover:shadow-lg"
+                className="overflow-hidden h-full transition-all duration-300 hover:shadow-lg flex flex-col"
                 onMouseEnter={() => setActiveProject(project.id)}
                 onMouseLeave={() => setActiveProject(null)}
               >
-                <div className="relative overflow-hidden h-48">
+                <div className="relative overflow-hidden h-40">
                   <motion.img
                     src={project.image}
                     alt={project.title}
@@ -127,31 +145,31 @@ export default function Projects() {
                   <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
                 </div>
 
-                <CardHeader>
-                  <CardTitle>{project.title}</CardTitle>
-                  <CardDescription>{project.description}</CardDescription>
+                <CardHeader className="py-3">
+                  <CardTitle className="text-lg">{project.title}</CardTitle>
+                  <CardDescription className="line-clamp-2">{project.description}</CardDescription>
                 </CardHeader>
 
-                <CardContent>
-                  <div className="flex flex-wrap gap-2">
+                <CardContent className="py-2 flex-grow">
+                  <div className="flex flex-wrap gap-1">
                     {project.tags.map((tag) => (
-                      <Badge key={tag} variant="secondary">
+                      <Badge key={tag} variant="secondary" className="text-xs">
                         {tag}
                       </Badge>
                     ))}
                   </div>
                 </CardContent>
 
-                <CardFooter className="flex justify-between">
+                <CardFooter className="flex justify-between pt-2 pb-3">
                   <Button variant="outline" size="sm" asChild>
                     <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                      <Github className="mr-2 h-4 w-4" />
+                      <Github className="mr-1 h-3 w-3" />
                       Code
                     </a>
                   </Button>
                   <Button size="sm" asChild>
                     <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="mr-2 h-4 w-4" />
+                      <ExternalLink className="mr-1 h-3 w-3" />
                       Live Demo
                     </a>
                   </Button>
