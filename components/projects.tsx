@@ -126,55 +126,83 @@ export default function Projects() {
         >
           {projectsData.map((project) => (
             <motion.div key={project.id} variants={item}>
-              <Card
-                className="overflow-hidden h-full transition-all duration-300 hover:shadow-lg flex flex-col"
-                onMouseEnter={() => setActiveProject(project.id)}
-                onMouseLeave={() => setActiveProject(null)}
+              <motion.div
+                whileHover={{ 
+                  y: -8,
+                  transition: { duration: 0.2 },
+                  boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1)"
+                }}
+                className="h-full"
               >
-                <div className="relative overflow-hidden h-40">
-                  <motion.img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover"
-                    initial={{ scale: 1 }}
-                    animate={{
-                      scale: activeProject === project.id ? 1.05 : 1,
-                    }}
-                    transition={{ duration: 0.3 }}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
-                </div>
-
-                <CardHeader className="py-3">
-                  <CardTitle className="text-lg">{project.title}</CardTitle>
-                  <CardDescription className="line-clamp-2">{project.description}</CardDescription>
-                </CardHeader>
-
-                <CardContent className="py-2 flex-grow">
-                  <div className="flex flex-wrap gap-1">
-                    {project.tags.map((tag) => (
-                      <Badge key={tag} variant="secondary" className="text-xs">
-                        {tag}
-                      </Badge>
-                    ))}
+                <Card
+                  className="overflow-hidden h-full flex flex-col border-2 hover:border-primary/50 transition-colors duration-300"
+                  onMouseEnter={() => setActiveProject(project.id)}
+                  onMouseLeave={() => setActiveProject(null)}
+                >
+                  <div className="relative overflow-hidden h-40">
+                    <motion.img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover"
+                      initial={{ scale: 1 }}
+                      whileHover={{ scale: 1.1 }}
+                      transition={{ duration: 0.4 }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
                   </div>
-                </CardContent>
 
-                <CardFooter className="flex justify-between pt-2 pb-3">
-                  <Button variant="outline" size="sm" asChild>
-                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                      <Github className="mr-1 h-3 w-3" />
-                      Code
-                    </a>
-                  </Button>
-                  <Button size="sm" asChild>
-                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="mr-1 h-3 w-3" />
-                      Live Demo
-                    </a>
-                  </Button>
-                </CardFooter>
-              </Card>
+                  <CardHeader className="py-3">
+                    <motion.div
+                      initial={{ x: 0 }}
+                      whileHover={{ x: 5 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      <CardTitle className="text-lg">{project.title}</CardTitle>
+                    </motion.div>
+                    <CardDescription className="line-clamp-2">{project.description}</CardDescription>
+                  </CardHeader>
+
+                  <CardContent className="py-2 flex-grow">
+                    <div className="flex flex-wrap gap-1">
+                      {project.tags.map((tag, index) => (
+                        <motion.div
+                          key={tag}
+                          initial={{ opacity: 1 }}
+                          whileHover={{ 
+                            scale: 1.05,
+                            backgroundColor: "var(--primary)",
+                            color: "var(--primary-foreground)"
+                          }}
+                          transition={{ duration: 0.2, delay: index * 0.05 }}
+                        >
+                          <Badge variant="secondary" className="text-xs transition-colors">
+                            {tag}
+                          </Badge>
+                        </motion.div>
+                      ))}
+                    </div>
+                  </CardContent>
+
+                  <CardFooter className="flex justify-between pt-2 pb-3">
+                    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                      <Button variant="outline" size="sm" asChild>
+                        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                          <Github className="mr-1 h-3 w-3" />
+                          Code
+                        </a>
+                      </Button>
+                    </motion.div>
+                    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                      <Button size="sm" asChild>
+                        <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink className="mr-1 h-3 w-3" />
+                          Live Demo
+                        </a>
+                      </Button>
+                    </motion.div>
+                  </CardFooter>
+                </Card>
+              </motion.div>
             </motion.div>
           ))}
         </motion.div>

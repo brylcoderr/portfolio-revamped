@@ -10,7 +10,7 @@ export default function Hero() {
   }
 
   return (
-    <section className="min-h-screen flex flex-col justify-center items-center px-4 relative overflow-hidden">
+    <section id="home" className="min-h-screen flex flex-col justify-center items-center px-4 relative overflow-hidden pt-16">
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-background/80" />
         <div className="absolute top-20 left-20 w-72 h-72 bg-primary/20 rounded-full blur-3xl" />

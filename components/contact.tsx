@@ -10,7 +10,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { toast } from "@/components/ui/use-toast"
-import { Github, Linkedin, Twitter, Mail, Calendar } from "lucide-react"
+import { Github, Linkedin, Twitter, Mail, Calendar, Download, Instagram, Youtube } from "lucide-react"
 import { Separator } from "@/components/ui/separator"
 import CalendlyEmbed from "./calendly-embed"
 
@@ -60,8 +60,8 @@ export default function Contact() {
   const socialLinks = [
     { icon: <Github className="h-5 w-5" />, url: "https://github.com/brylcoderr", label: "GitHub" },
     { icon: <Linkedin className="h-5 w-5" />, url: "https://linkedin.com/in/brylcoder", label: "LinkedIn" },
-    { icon: <Twitter className="h-5 w-5" />, url: "https://twitter.com/dpshubham", label: "Twitter" },
-    { icon: <Mail className="h-5 w-5" />, url: "mailto:brylcoder@gmail.com", label: "Email" },
+    { icon: <Instagram className="h-5 w-5" />, url: "https://instagram.com/brylcoder", label: "Instagram" },
+    { icon: <Youtube className="h-5 w-5" />, url: "https://youtube.com/brylcoder", label: "YouTube" },
   ]
 
   return (
@@ -100,7 +100,7 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="mb-8">
+            <div className="flex flex-wrap gap-4 mb-8">
               <Button
                 onClick={() => setShowCalendly(true)}
                 className="flex items-center gap-2"
@@ -109,6 +109,13 @@ export default function Contact() {
               >
                 <Calendar className="h-5 w-5" />
                 Schedule a Meeting
+              </Button>
+
+              <Button asChild size="lg" variant="outline" className="flex items-center gap-2">
+                <a href="/resume.pdf" download>
+                  <Download className="h-5 w-5" />
+                  Download Resume
+                </a>
               </Button>
 
               {showCalendly && <CalendlyEmbed onClose={() => setShowCalendly(false)} />}

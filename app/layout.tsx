@@ -7,9 +7,37 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Personal Portfolio",
-  description: "A modern, interactive, and multi-theme personal portfolio",
-    generator: 'v0.dev'
+  title: "Shubham's Portfolio | Front End Developer & UI/UX Enthusiast",
+  description: "Front End Developer & UI/UX Enthusiast with expertise in modern JavaScript frameworks, responsive design, and user experience.",
+  generator: 'v0.dev',
+  openGraph: {
+    title: "Shubham's Portfolio | Front End Developer & UI/UX Enthusiast",
+    description: "Front End Developer & UI/UX Enthusiast with expertise in modern JavaScript frameworks, responsive design, and user experience.",
+    url: 'https://brylcoder.dev',
+    siteName: "Shubham's Portfolio",
+    images: [
+      {
+        url: '/profile.jpg',
+        width: 1200,
+        height: 630,
+        alt: "Shubham's Portfolio"
+      }
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Shubham's Portfolio | Front End Developer",
+    description: "Front End Developer & UI/UX Enthusiast with expertise in modern JavaScript frameworks, responsive design, and user experience.",
+    images: ['/profile.jpg'],
+    creator: '@dpshubham'
+  },
+  viewport: 'width=device-width, initial-scale=1',
+  robots: {
+    index: true,
+    follow: true
+  }
 }
 
 export default function RootLayout({
@@ -18,7 +46,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className="theme-purple">
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           {children}
