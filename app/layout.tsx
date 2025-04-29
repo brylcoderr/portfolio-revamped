@@ -9,15 +9,17 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Shubham's Portfolio | Front End Developer & UI/UX Enthusiast",
   description: "Front End Developer & UI/UX Enthusiast with expertise in modern JavaScript frameworks, responsive design, and user experience.",
-  generator: 'v0.dev',
+  icons: {
+    icon: '/logo.gif',
+  },
   openGraph: {
     title: "Shubham's Portfolio | Front End Developer & UI/UX Enthusiast",
     description: "Front End Developer & UI/UX Enthusiast with expertise in modern JavaScript frameworks, responsive design, and user experience.",
-    url: 'https://brylcoder.dev',
+    url: 'https://brylcoder.vercel.app',
     siteName: "Shubham's Portfolio",
     images: [
       {
-        url: '/profile.jpg',
+        url: '/logo.gif',
         width: 1200,
         height: 630,
         alt: "Shubham's Portfolio"
@@ -30,8 +32,8 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: "Shubham's Portfolio | Front End Developer",
     description: "Front End Developer & UI/UX Enthusiast with expertise in modern JavaScript frameworks, responsive design, and user experience.",
-    images: ['/profile.jpg'],
-    creator: '@dpshubham'
+    images: ['/logo.gif'],
+    creator: 'Brylcoder'
   },
   viewport: 'width=device-width, initial-scale=1',
   robots: {

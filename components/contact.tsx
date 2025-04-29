@@ -10,7 +10,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { toast } from "@/components/ui/use-toast"
-import { Github, Linkedin, Twitter, Mail, Calendar, Download, Instagram, Youtube } from "lucide-react"
+import { Github, Linkedin, Twitter, Mail, Calendar, Download, Instagram, Youtube, MessageCircle } from "lucide-react"
 import { Separator } from "@/components/ui/separator"
 import CalendlyEmbed from "./calendly-embed"
 
@@ -60,7 +60,8 @@ export default function Contact() {
   const socialLinks = [
     { icon: <Github className="h-5 w-5" />, url: "https://github.com/brylcoderr", label: "GitHub" },
     { icon: <Linkedin className="h-5 w-5" />, url: "https://linkedin.com/in/brylcoder", label: "LinkedIn" },
-    // { icon: <Instagram className="h-5 w-5" />, url: "https://instagram.com/brylcoder", label: "Instagram" },
+    { icon: <Instagram className="h-5 w-5" />, url: "https://instagram.com/brylcodes", label: "Instagram" },
+    { icon: <MessageCircle className="h-5 w-5" />, url: "https://wa.me/+919557660208", label: "WhatsApp" },
     // { icon: <Youtube className="h-5 w-5" />, url: "https://youtube.com/brylcoder", label: "YouTube" },
   ]
 

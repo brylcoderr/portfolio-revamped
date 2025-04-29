@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Button } from "@/components/ui/button"
-import { Moon, Sun, Menu, X, Download, Github, Linkedin, Instagram, Youtube } from "lucide-react"
+import { Moon, Sun, Menu, X, Download, Github, Linkedin, Instagram, Youtube, MessageCircle} from "lucide-react"
 import { useTheme } from "next-themes"
 import Link from "next/link"
 
@@ -48,7 +48,8 @@ export default function Navbar() {
   const socialLinks = [
     { icon: <Github className="h-5 w-5" />, url: "https://github.com/brylcoderr", label: "GitHub" },
     { icon: <Linkedin className="h-5 w-5" />, url: "https://linkedin.com/in/brylcoder", label: "LinkedIn" },
-    // { icon: <Instagram className="h-5 w-5" />, url: "https://instagram.com/brylcoder", label: "Instagram" },
+    { icon: <Instagram className="h-5 w-5" />, url: "https://instagram.com/brylcodes", label: "Instagram" },
+    { icon: <MessageCircle className="h-5 w-5" />, url: "https://wa.me/+919557660208", label: "WhatsApp" },
     // { icon: <Youtube className="h-5 w-5" />, url: "https://youtube.com/brylcoder", label: "YouTube" },
   ]
 
